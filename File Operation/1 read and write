@@ -1,0 +1,15 @@
+
+inputFile = open('input.txt', 'r');     # open input file
+outputFile = open('output.txt', 'w');   # open output file
+inputData = inputFile.readlines()       # read whole file by lines
+
+for line in inputData:                  # read single data and convert into array then perform addition
+    arr = line.split()
+    sum = 0;
+    for i in arr:
+        sum = sum+ int(i)
+    print(sum)
+    outputFile.write(str(sum)+"\n")
+
+inputFile.close()                       # clsoe file
+outputFile.close()
